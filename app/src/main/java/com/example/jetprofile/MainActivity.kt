@@ -63,6 +63,26 @@ class MainActivity : ComponentActivity() {
                            fontSize = 16.sp,
 
                            )
+                       Spacer(modifier = Modifier.height(20.dp))
+
+                       Column(
+                           horizontalAlignment = Alignment.Start,
+                           modifier = Modifier.fillMaxWidth()
+                       ) {
+                           Text(
+                               text = "関西学院大学",
+                               fontSize = 25.sp,
+                               fontWeight = FontWeight.Bold
+                           )
+                           Spacer(modifier = Modifier.height(10.dp))
+
+                           Text(
+                               text = "文学部文学言語学科フランス文学フランス語学専修",
+                               fontSize = 16.sp,
+                               color = Color.Gray
+                           )
+
+                       }
                    }
                 }
             }

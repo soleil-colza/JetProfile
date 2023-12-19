@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -14,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -41,7 +43,9 @@ class MainActivity : ComponentActivity() {
                            contentDescription = "Profile image",
                            modifier = Modifier
                                .height(200.dp)
-                               .clip(RoundedCornerShape(10.dp))
+                               .width(200.dp)
+                               .clip(CircleShape),
+                           contentScale = ContentScale.Crop
                        )
                        Spacer(modifier = Modifier.height(20.dp))
                        Text(
@@ -54,7 +58,7 @@ class MainActivity : ComponentActivity() {
                        Spacer(modifier = Modifier.height(20.dp))
 
                        Text(
-                           text = "職業：Androidエンジニア",
+                           text = "Androidエンジニア",
                            color = Color.Gray,
                            fontSize = 16.sp,
 

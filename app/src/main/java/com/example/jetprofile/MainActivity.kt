@@ -87,8 +87,10 @@ fun MainContent(){
         Spacer(modifier = Modifier.height(20.dp))
 
         // 詳細表示ボタン
+
+        var isShowDetail = false
         Button(
-            onClick = {},
+            onClick = {isShowDetail = !isShowDetail},
             modifier = Modifier
                 .fillMaxWidth()
                 .height(40.dp),
@@ -101,6 +103,8 @@ fun MainContent(){
         Spacer(modifier = Modifier.height(20.dp))
 
         //趣味と居住地
-        DetailSection()
+        if (isShowDetail){
+            DetailSection()
+        }
     }
 }

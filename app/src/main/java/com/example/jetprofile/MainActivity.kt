@@ -1,16 +1,14 @@
 package com.example.jetprofile
 
 import android.os.Bundle
+import android.widget.Space
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.runtime.Composable
@@ -101,7 +99,19 @@ class MainActivity : ComponentActivity() {
                                    fontWeight = FontWeight.Bold,
                                    fontSize = 16.sp
                                )
+
+                               Spacer(modifier = Modifier.width(10.dp))
+
+                               Text(text = "soleil.colza@icloud.com", fontSize = 16.sp)
+
+                               Spacer(modifier = Modifier.width(10.dp))
+
                            }
+                           Divider(
+                               thickness = 1.dp,
+                               modifier = Modifier
+                                   .clip(RoundedCornerShape(1000.dp)),
+                           )
                        }
                    }
                 }

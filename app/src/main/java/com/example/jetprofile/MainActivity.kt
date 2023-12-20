@@ -14,7 +14,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.LocationOn
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -88,7 +88,7 @@ fun MainContent(){
 
         // 詳細表示ボタン
 
-        var isShowDetail = false
+        var isShowDetail by remember { mutableStateOf(false) }
         Button(
             onClick = {isShowDetail = !isShowDetail},
             modifier = Modifier

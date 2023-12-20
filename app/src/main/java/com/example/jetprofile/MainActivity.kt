@@ -27,6 +27,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.jetprofile.components.CompanySection
+import com.example.jetprofile.components.Label
 import com.example.jetprofile.ui.theme.JetProfileTheme
 
 class MainActivity : ComponentActivity() {
@@ -71,48 +73,8 @@ class MainActivity : ComponentActivity() {
                            )
                        Spacer(modifier = Modifier.height(20.dp))
 
-                       Column(
-                           horizontalAlignment = Alignment.Start,
-                           modifier = Modifier.fillMaxWidth()
-                       ) {
-                           Text(
-                               text = "関西学院大学",
-                               fontSize = 25.sp,
-                               fontWeight = FontWeight.Bold
-                           )
+                       CompanySection()
 
-                           Spacer(modifier = Modifier.height(10.dp))
-
-                           Text(
-                               text = "文学部文学言語学科",
-                               fontSize = 16.sp,
-                               color = Color.Gray
-                           )
-                           Text(
-                               text = "フランス文学フランス語学専修",
-                               fontSize = 16.sp,
-                               color = Color.Gray
-                           )
-
-                            Spacer(modifier = Modifier.height(20.dp))
-
-                           Label(
-                                 icon = Icons.Default.Email,
-                                 text = "Email"
-                           )
-
-                           Spacer(modifier = Modifier.height(10.dp))
-
-                           Text(text = "soleil.colza@icloud.com", fontSize = 16.sp)
-
-                           Spacer(modifier = Modifier.height(10.dp))
-
-                           Divider(
-                               thickness = 1.dp,
-                               modifier = Modifier
-                                   .clip(RoundedCornerShape(1000.dp)),
-                           )
-                       }
                        Spacer(modifier = Modifier.height(20.dp))
 
                        // 詳細表示ボタン
@@ -155,23 +117,5 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Label(icon: ImageVector, text: String, color : Color = MaterialTheme.colors.onBackground){
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Icon(
-            imageVector = icon,
-            contentDescription = "null"
-        )
-        Spacer(modifier = Modifier.width(10.dp))
-
-        Text(
-            text = text,
-            fontWeight = FontWeight.Bold,
-            fontSize = 16.sp
-        )
-
     }
 }

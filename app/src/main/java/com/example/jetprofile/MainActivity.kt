@@ -126,7 +126,10 @@ class MainActivity : ComponentActivity() {
                            onClick = {},
                             modifier = Modifier
                                  .fillMaxWidth()
-                                 .height(50.dp),
+                                 .height(40.dp),
+                           colors = ButtonDefaults.buttonColors(
+                               backgroundColor = Color(0xfff85f6a)
+                           ),
                        ){
                            Text(text = "詳細を表示", color = Color.White)
                        }

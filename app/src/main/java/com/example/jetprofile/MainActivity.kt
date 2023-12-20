@@ -42,61 +42,65 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    
-                   Column(
-                       horizontalAlignment = Alignment.CenterHorizontally,
-                       modifier = Modifier.padding(20.dp)
-                   ) {
-                       Image(
-                           painter = painterResource(id = R.drawable.image_profile),
-                           contentDescription = "Profile image",
-                           modifier = Modifier
-                               .height(200.dp)
-                               .width(200.dp)
-                               .clip(CircleShape),
-                           contentScale = ContentScale.Crop
-                       )
-                       Spacer(modifier = Modifier.height(20.dp))
-                       Text(
-                           text = "中平 陽菜",
-                           color = Color.Gray,
-                           fontWeight = FontWeight.ExtraBold,
-                           fontSize = 26.sp
-                       )
-
-                       Spacer(modifier = Modifier.height(20.dp))
-
-                       Text(
-                           text = "Androidエンジニア",
-                           color = Color.Gray,
-                           fontSize = 16.sp,
-
-                           )
-                       Spacer(modifier = Modifier.height(20.dp))
-
-                       CompanySection()
-
-                       Spacer(modifier = Modifier.height(20.dp))
-
-                       // 詳細表示ボタン
-                       Button(
-                           onClick = {},
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(40.dp),
-                           colors = ButtonDefaults.buttonColors(
-                               backgroundColor = Color(0xfff85f6a)
-                           ),
-                       ){
-                           Text(text = "詳細を表示", color = Color.White)
-                       }
-                       Spacer(modifier = Modifier.height(20.dp))
-
-                       //趣味と居住地
-                       DetailSection()
-                   }
+                    MainContent()
                 }
             }
         }
+    }
+}
+
+@Composable
+fun MainContent(){
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.padding(20.dp)
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.image_profile),
+            contentDescription = "Profile image",
+            modifier = Modifier
+                .height(200.dp)
+                .width(200.dp)
+                .clip(CircleShape),
+            contentScale = ContentScale.Crop
+        )
+        Spacer(modifier = Modifier.height(20.dp))
+        Text(
+            text = "中平 陽菜",
+            color = Color.Gray,
+            fontWeight = FontWeight.ExtraBold,
+            fontSize = 26.sp
+        )
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        Text(
+            text = "Androidエンジニア",
+            color = Color.Gray,
+            fontSize = 16.sp,
+
+            )
+        Spacer(modifier = Modifier.height(20.dp))
+
+        CompanySection()
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        // 詳細表示ボタン
+        Button(
+            onClick = {},
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(40.dp),
+            colors = ButtonDefaults.buttonColors(
+                backgroundColor = Color(0xfff85f6a)
+            ),
+        ){
+            Text(text = "詳細を表示", color = Color.White)
+        }
+        Spacer(modifier = Modifier.height(20.dp))
+
+        //趣味と居住地
+        DetailSection()
     }
 }

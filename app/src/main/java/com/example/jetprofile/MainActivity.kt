@@ -142,7 +142,9 @@ class MainActivity : ComponentActivity() {
                                text = "ジム・ポケモン",
                                color = Color.Gray
                            )
-                            Spacer(modifier = Modifier.height(10.dp))
+
+                           Spacer(modifier = Modifier.height(10.dp))
+
                            Label(
                                icon = Icons.Default.LocationOn,
                                text = "神戸市",

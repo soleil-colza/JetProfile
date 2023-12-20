@@ -5,6 +5,7 @@ import android.widget.Space
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -125,13 +126,24 @@ class MainActivity : ComponentActivity() {
                        Button(
                            onClick = {},
                             modifier = Modifier
-                                 .fillMaxWidth()
-                                 .height(40.dp),
+                                .fillMaxWidth()
+                                .height(40.dp),
                            colors = ButtonDefaults.buttonColors(
                                backgroundColor = Color(0xfff85f6a)
                            ),
                        ){
                            Text(text = "詳細を表示", color = Color.White)
+                       }
+                       Spacer(modifier = Modifier.height(20.dp))
+
+                       //趣味と居住地
+                       Column(
+                           modifier = Modifier
+                               .fillMaxWidth()
+                               .clip(RoundedCornerShape(10.dp))
+                               .background(Color.LightGray.copy(alpha = 0.3f))
+                               .padding(horizontal = 10.dp, vertical = 20.dp)
+                       ) {
                        }
                    }
                 }

@@ -119,6 +119,17 @@ class MainActivity : ComponentActivity() {
                                    .clip(RoundedCornerShape(1000.dp)),
                            )
                        }
+                       Spacer(modifier = Modifier.height(20.dp))
+
+                       // 詳細表示ボタン
+                       Button(
+                           onClick = {},
+                            modifier = Modifier
+                                 .fillMaxWidth()
+                                 .height(50.dp),
+                       ){
+                           Text(text = "詳細を表示", color = Color.White)
+                       }
                    }
                 }
             }

@@ -80,7 +80,12 @@ class MainActivity : ComponentActivity() {
                            Spacer(modifier = Modifier.height(10.dp))
 
                            Text(
-                               text = "文学部文学言語学科フランス文学フランス語学専修",
+                               text = "文学部文学言語学科",
+                               fontSize = 16.sp,
+                               color = Color.Gray
+                           )
+                           Text(
+                               text = "フランス文学フランス語学専修",
                                fontSize = 16.sp,
                                color = Color.Gray
                            )
@@ -100,13 +105,14 @@ class MainActivity : ComponentActivity() {
                                    fontSize = 16.sp
                                )
 
-                               Spacer(modifier = Modifier.width(10.dp))
-
-                               Text(text = "soleil.colza@icloud.com", fontSize = 16.sp)
-
-                               Spacer(modifier = Modifier.width(10.dp))
-
                            }
+
+                           Spacer(modifier = Modifier.height(10.dp))
+
+                           Text(text = "soleil.colza@icloud.com", fontSize = 16.sp)
+
+                           Spacer(modifier = Modifier.height(10.dp))
+
                            Divider(
                                thickness = 1.dp,
                                modifier = Modifier

@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.VerticalAlignmentLine
 import androidx.compose.ui.res.painterResource
@@ -152,3 +153,20 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Composable
+fun label(icon: ImageVector, text: String, color : Color = MaterialTheme.colors.onBackground){
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Icon(
+            imageVector = icon,
+            contentDescription = "null"
+        )
+        Spacer(modifier = Modifier.width(10.dp))
+
+        Text(
+            text = text,
+            fontWeight = FontWeight.Bold,
+            fontSize = 16.sp
+        )
+
+    }
+}

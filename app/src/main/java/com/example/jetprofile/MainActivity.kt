@@ -12,6 +12,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -135,6 +137,17 @@ class MainActivity : ComponentActivity() {
                                .background(Color.LightGray.copy(alpha = 0.3f))
                                .padding(horizontal = 10.dp, vertical = 20.dp)
                        ) {
+                           Label(
+                               icon = Icons.Default.Favorite,
+                               text = "ジム・ポケモン",
+                               color = Color.Gray
+                           )
+                            Spacer(modifier = Modifier.height(10.dp))
+                           Label(
+                               icon = Icons.Default.LocationOn,
+                               text = "神戸市",
+                               color = Color.Gray
+                           )
                        }
                    }
                 }

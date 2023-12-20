@@ -94,20 +94,10 @@ class MainActivity : ComponentActivity() {
 
                             Spacer(modifier = Modifier.height(20.dp))
 
-                           Row(verticalAlignment = Alignment.CenterVertically) {
-                               Icon(
-                                   imageVector = Icons.Default.Email,
-                                   contentDescription = "email"
-                               )
-                               Spacer(modifier = Modifier.width(10.dp))
-
-                               Text(
-                                   "Email",
-                                   fontWeight = FontWeight.Bold,
-                                   fontSize = 16.sp
-                               )
-
-                           }
+                           Label(
+                                 icon = Icons.Default.Email,
+                                 text = "Email"
+                           )
 
                            Spacer(modifier = Modifier.height(10.dp))
 
@@ -154,7 +144,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun label(icon: ImageVector, text: String, color : Color = MaterialTheme.colors.onBackground){
+fun Label(icon: ImageVector, text: String, color : Color = MaterialTheme.colors.onBackground){
     Row(verticalAlignment = Alignment.CenterVertically) {
         Icon(
             imageVector = icon,

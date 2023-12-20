@@ -38,8 +38,8 @@ fun JetProfileTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Compos
     }
 
     rememberSystemUiController().setStatusBarColor(
-        color = Color.White,
-        darkIcons = true,
+        color = if (darkTheme) Color.Black else Color.White,
+        darkIcons = !darkTheme
     )
     MaterialTheme(
         colors = colors,
